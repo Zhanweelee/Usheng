@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Login</title>
+</head>
+<body>
+<div class="login">
+	<span>uname: <span><input type="text" name="uname" />
+	<span>password: <span><input type="text" name="password" />
+	<button type="submit" id="login">login</buttom>
+</div>
+
+<script src="/firechat/static/js/common/jquery-1.8.0.js"></script>
+<script>
+	$("#login").click(function(){
+		var info = new Array();
+		$(".login").find("input[type=text]").each(function(){
+			info.push($(this).val());
+		});
+		var uname = info[0],
+			password = info[1];
+		console.log(info);
+		console.log("123");
+		$.ajax({
+			type: "post",
+			url: "__URL__/login",
+			data:{
+				"uname": uname,
+				"password": password
+			},
+			success:function(msg){
+				console.log(msg);
+			},
+			dataType: "json"
+		});
+	})
+</script>
+</body>
+</html>

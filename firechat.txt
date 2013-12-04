@@ -1,0 +1,31 @@
+网站信息
+fc_config: id, title, description, keyword, remark, ctime
+
+用户
+fc_user: uid, uname, email, sex, birth, city, is_active, is_del, ctime, level
+
+登陆注册
+个人信息
+
+发布
+fc_publish: pid, uid, content, pic, video, validtime, praise, down, isdel, ctime
+
+发表动态
+删除动态
+编辑动态
+
+// 评论fc_comment:id, uid, pid, cid, 赞, ctime
+// 发表评论
+
+消息提醒fc_notify:(id, type, uid, ctime)
+@我
+粉丝
+评论
+
+关注功能:
+关注用户
+备注
+
+在线:
+网站在线
+访问记录
